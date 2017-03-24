@@ -50,7 +50,7 @@ function sendText(sender, text) {
     qs: {access_token : token},
     method: "POST",
     json: {
-      receipt: {id: sender},
+      recipient: {id: sender},
       message: messageData
     }
   }, function(err, response, body){
