@@ -40,6 +40,7 @@ app.post('/webhook/', function(req, res){
       sendText(sender, `text echo: ${text.substring(0, 100)}`)
     }
   }
+  res.sendStatus(200)
 })
 
 function sendText(sender, text) {
