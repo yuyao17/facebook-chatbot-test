@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 // Facebook
 
 app.get('/webhook/', function(req, res){
-  if (req.query['hub.verify_token'] === "yuyaaaar") {
+  if (req.query['hub.verify_token'] === "yuyaaaar") { // if /webook/?hub.verify_token=yuyaaaar　的な。GET REQUEST送る時にquery paramsにverify_tokenが合っていたら
     res.send(req.query['hub.challenge'])
   }
   res.send("Wrong token")
@@ -37,7 +37,7 @@ app.post('/webhook/', function(req, res){
     let sender = event.sender.id
     if (event.message && event.message.text) {
       let text = event.message.text
-      sendText(sender, `text echo: ${text.substring(0, 100)}`)
+      sendText(sender, `${text.substring(0, 100)}, fuck you`)
     }
   }
   res.sendStatus(200)
