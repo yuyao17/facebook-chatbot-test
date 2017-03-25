@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 var port = app.get("port")
 
-var token = "EAAIlA8L7tAYBAOYsdb2UNTsh2kvCDCdEm8j1iaFvmAihoKZBGdHCeYXFPfKyyk1C1OaZBY6nUVKNg1m6ivbW1UfiNFkmjZAQ4xV2aXt0Tg3wFACYvfEyxKpyq1QNGJNi8bcZBgErERM2mYZAxKPao29kJR73PCb8r6YCutZBUoNAZDZD"
+var token = process.env.FB_TOKEN
 // Routes
 
 app.get('/', function(req, res){
