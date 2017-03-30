@@ -3,3 +3,8 @@
 ```
 npm install
 ```
+
+commands:
+```
+wiki <query>
+```
